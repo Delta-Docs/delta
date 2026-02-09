@@ -29,7 +29,7 @@ Delta is an automated documentation system that ensures documentation remains co
 
 ---
 
-## 3. Directory Structure & File Description
+## 3. File Description
 
 ### 3.1 Frontend (`/frontend`)
 
@@ -133,9 +133,55 @@ Access via: http://localhost:8000
 
 ---
 
-## 5. Troubleshooting
+## 5. Directory Structure
 
-### 5.1 Frontend Issues
+```
+delta/
+│
+├── frontend/ # React + TypeScript frontend
+│   ├── src/
+│   │   ├── app/ # App configuration and routing
+│   │   ├── assets/ # Images, fonts, global styles
+│   |   ├── components/ # Reusable UI components
+│   │   │   ├── shadcn/ # Design system components
+│   │   │   └── landing/ # Landing page specific components
+│   │   ├── pages/ # Page-level components
+│   │   ├── hooks/ # Custom React hooks
+│   │   └── utils/ # Utility/helper functions
+│   │
+│   ├── index.html
+│   ├── package.json
+│   ├── bun.lockb / package-lock.json
+│   ├── tsconfig.json
+│   ├── vite.config.ts
+│   └── tailwind.config.js
+│
+├── backend/ # FastAPI backend
+│   ├── app/
+│   │   ├── api/ # API routes and endpoints
+│   │   ├── core/ # Config and security modules
+│   │   ├── db/ # Database connection/session
+│   │   ├── models/ # SQLAlchemy models
+│   │   ├── schemas/ # Pydantic schemas
+│   │   ├── services/ # Business logic layer
+│   │   └── main.py # Application entry point
+│   │
+│   ├── alembic/ # Database migrations
+│   ├── tests/ # Unit and integration tests
+│   ├── requirements.txt
+│   └── .env
+│
+├── docs/ # Documentation files (optional)
+├── README.md
+└── .gitignore
+```
+
+
+---
+
+## 6. Troubleshooting
+
+### 6.1 Frontend Issues
 
 **Issue:** "Module not found" or import errors.<br/>
 **Cause:** Missing dependencies or incorrect paths.<br/>
@@ -146,7 +192,7 @@ Access via: http://localhost:8000
 **Fix:** Check other terminals. Vite usually auto-switches to the next available port (e.g., 5174).<br/>
 <br/>
 
-### 5.2 Backend Issues
+### 6.2 Backend Issues
 
 **Issue:** ModuleNotFoundError: No module named fastapi <br/>
 **Cause:** Dependencies are not installed in the current environment.<br/>

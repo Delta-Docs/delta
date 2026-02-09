@@ -85,51 +85,8 @@ bun dev
 Access via: http://localhost:5173
 
 #### 4.2.2 Backend Service
-1. *Windows (PowerShell)*
 
-**Environment Setup:**
-
-```bash
-cd backend
-python -m venv .venv
-.\.venv\Scripts\Activate
-```
-
-**Dependency Installation:**
-
-```bash
-pip install -r requirements.txt
-```
-
-**Execute:**
-
-```bash
-uvicorn app.main:app --reload
-```
-
-2. *Linux / macOS (Bash)*
-
-**Environment Setup:**
-
-```bash
-cd backend
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-**Dependency Installation:**
-
-```bash
-pip install -r requirements.txt
-```
-
-**Execute:**
-
-```bash
-uvicorn app.main:app --reload
-# Or utilizing Make: make setup && make dev
-```
-Access via: http://localhost:8000
+refer [link](https://github.com/Delta-Docs/delta.backend)
 
 ---
 
